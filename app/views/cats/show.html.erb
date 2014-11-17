@@ -6,8 +6,10 @@
 
 <div class="well">
   <% @cat.toys.each do |toy| %>
-  <p>
-    <%= toy.name %>
-  </p>
+  <ul>
+    <li>
+      <%= link_to toy.name, toy_path(toy) %>
+    </li>
+  </ul>
   <% end %>
 </div>
